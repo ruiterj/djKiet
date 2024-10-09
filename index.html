@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supporters Wall</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #fff;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #000;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #000;
+            margin: 15px 0;
+        }
+
+        .total-donations {
+            font-size: 4em;
+            font-weight: bold;
+            color: #000;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .donation-form {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .donation-form input, .donation-form button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 1em;
+            border: 1px solid #000;
+            border-radius: 5px;
+            background: #fff;
+        }
+
+        .donation-form button {
+            background-color: #000;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .donation-form button:hover {
+            background-color: #444;
+        }
+
+        .donors-list {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .donors-list h3 {
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        #donorList li {
+            font-size: 1.2em;
+            margin: 5px 0;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Donier hier voor het kiet wil dj worden fonds</h1>
+
+    <img src="path_to_your_image.jpg" alt="Profile Picture" class="profile-picture">
+
+    <div class="total-donations">Total Donations: €<span id="totalAmount">0</span></div>
+
+    <div class="donation-form">
+        <h2>Pas op, geld lenen kost geld!</h2>
+        <input type="text" id="donorName" placeholder="Your Name" required>
+        <input type="number" id="donationAmount" placeholder="Donation Amount (€)" required min="1">
+        <button onclick="submitDonation()">Add Your Name</button>
+    </div>
+
+    <div class="donors-list">
+        <h3>Onze geweldige donateurs:</h3>
+        <ul id="donorList">
+            <!-- Donor names will be dynamically added here -->
+        </ul>
+    </div>
+
+    <script>
+        // Your JavaScript code remains the same
+    </script>
+
+</body>
+</html>
